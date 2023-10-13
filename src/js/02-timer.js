@@ -47,7 +47,7 @@ function addLeadingZero(b) {
 function starttimerFunction(e) {
   inputEl.disabled = true;
   btnEl.disabled = true;
-  timerrun = setInterval(() => {
+   const timerrun = setInterval(() => {
     let restData = dataObj.selectData.getTime() - new Date().getTime();
     addLeadingZero(convertMs(restData - 1000));
     if (restData<2000){
