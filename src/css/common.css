@@ -26,7 +26,7 @@ img {
   font-size: 20px;
   color:rgb(0, 60, 255);
 }
-button[data-start]{
+button[data-start],button[data-stop]{
   padding: 5px 32px;
   font-size: 20px;
 }
