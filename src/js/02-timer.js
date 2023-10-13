@@ -5,7 +5,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 const btnEl = document.querySelector('button');
 const inputEl = document.querySelector('#datetime-picker');
 btnEl.disabled = true;
-
+let timerrun = null;
 const elements = {
   days: document.querySelector('span[data-days]'),
   hours: document.querySelector('span[data-hours]'),
@@ -47,7 +47,7 @@ function addLeadingZero(b) {
 function starttimerFunction(e) {
   inputEl.disabled = true;
   btnEl.disabled = true;
-   const timerrun = setInterval(() => {
+    timerrun = setInterval(() => {
     let restData = dataObj.selectData.getTime() - new Date().getTime();
     addLeadingZero(convertMs(restData - 1000));
     if (restData<2000){
