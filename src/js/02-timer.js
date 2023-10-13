@@ -50,7 +50,7 @@ function starttimerFunction(e) {
     timerrun = setInterval(() => {
     let restData = dataObj.selectData.getTime() - new Date().getTime();
     addLeadingZero(convertMs(restData - 1000));
-    if (restData<2000){
+    if (seconds.textContent==='00'){
         clearTimeout(timerrun);
         inputEl.disabled = false;
         btnEl.disabled = true;
